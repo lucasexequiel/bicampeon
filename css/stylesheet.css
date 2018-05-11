@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;  
+    margin: 0;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;  
+    background-color: black;
+}
+
+.contenedor{
+    height: 563px; /*defino el tamaño aquí por que el contenedor era ligeramente más grande que la imagen (no se por qué)*/
+    margin: auto; 
+    padding: 0;
+    overflow: hidden;
+}
+
+.contenedor:hover {
+    width: auto;
+    height: 563px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, blue 0%, gold 100%);
+    border-image-slice: 1;
+    transition-duration: 0.5s;
+}
+
+.contenedor:hover .mortal-combat-image {
+    transform: scale(1.5);
+    transition-duration:2s;
+    transition-delay: 0.2s;
+}
+
+.contenedor:hover .logo{
+    opacity:1;
+    transform: rotateY(0deg);
+    transition-duration: 1.5s;
+    transition-delay: 1s;
+}
+
+.contenedor:hover .titulo{
+    opacity:1;
+    transition-duration: 2s;
+    transition-delay: 1.5s;
+}
+
+.background{
+    height: 563px;
+    position: relative;
+}
+
+
+.boca-image{
+    transition-duration:1s;
+}
+
+.logo{
+    position: absolute;
+    z-index:1;
+    left: 40%;
+    top: 30%;
+    opacity:0;
+    transform: rotateY(270deg);
+    transition-duration:0.5s;
+    border-radius: 50%;
+}
+
+.titulo{
+    position: absolute;
+    width: 100%;
+    z-index:1;
+    left: 20%;
+    top: 60%;
+    font-family: 'Cinzel', serif;
+    font-size: 100px;
+    
+    opacity: 0;
+    transition-duration:0.5s;
+
+    background: linear-gradient(grey,gold);
+    -webkit-background-clip: text;
+    color: transparent;  
+
+}
